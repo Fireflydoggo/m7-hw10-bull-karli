@@ -18,6 +18,7 @@ var textarea = localStorage.getItem('textarea')
 formEl.onsubmit = function(e) {
   // prevents form submission
   e.preventDefault()
+  console.log('saved')
   // save name element's content to cookies
   var cookie = document.cookie
   if (cookie) {
@@ -25,9 +26,9 @@ formEl.onsubmit = function(e) {
   }
   document.cookie = 'span=' + nameSpan.textContent + ';'
   // save textarea's content to localstorage
-  textarea = textareaInput.value
-  
+  var textarea = textareaInput.value
   localStorage.setItem('textarea', textarea)
+  formEl.textContent = nameSpan + " " + textarea
   // YOUR CODE HERE
   
 
