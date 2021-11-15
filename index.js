@@ -40,6 +40,10 @@ clear.onclick = function() {
   // Clear textarea's value
   // Clear localstorage's content
   // YOUR CODE HERE
+  var textarea = getElementById('textarea')
+  document.getElementById('textarea').value = "";
+  localStorage.clear('textarea');
+  
 
   // triggers thumbs up animation
   this.classList.add('emoji')
